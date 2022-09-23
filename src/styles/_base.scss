@@ -6,6 +6,13 @@
 body{
     font-family: $font-primary;
     font-weight: 500;
+    margin: 0;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1{
@@ -34,9 +41,12 @@ ul{
 }
 
 .header{
-    @include flex-sb;
-    max-width: $max-width;
-    margin: 30px auto;
+    
+    .header-container{
+        @include flex-sb;
+        max-width: $max-width;
+        margin: 30px auto;
+    }
 
     .logo img{
         width: 210px;
@@ -54,4 +64,13 @@ ul{
             text-decoration: underline;
         }
     }
+}
+
+.footer{
+    @include flex-cc;
+    flex-direction: column;
+    background: black;
+    color: white;
+    padding: 50px;
+    margin: 40px 0 0 0;
 }

@@ -1,6 +1,7 @@
 .error-container{
     max-width: $max-width;
     margin: auto;
+    flex-grow: 1;
 
     h1{
         font-weight: 700;
@@ -12,7 +13,7 @@
         color: $color-primary;
         text-align: center;
         font-size: 36px;
-        margin-bottom: 200px;
+        margin-bottom: 20 0px;
     }
     a{
         display: block;
