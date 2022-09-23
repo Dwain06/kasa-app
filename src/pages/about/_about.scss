@@ -1,0 +1,82 @@
+.about {
+    max-width: 1023px;
+    margin: auto;
+
+    ul li {
+        margin-top: 25px;
+        position: relative;
+
+        input {
+            position: absolute;
+            top: 0;
+            cursor: pointer;
+            width: 983px;
+            height: 60px;
+            z-index: 2;
+            opacity: 0;
+        
+            &:checked~p {
+                margin-top: -10px;
+                margin-bottom: 40px;
+                max-height: 250px;
+                opacity: 1;
+            }
+            &:checked~i:before {
+                transform: translate(6px, 0) rotate(45deg);
+            }
+            &:checked~i:after {
+                transform: translate(-6px, 0) rotate(-45deg);
+            }
+        }
+    }
+
+    h2 {
+        margin: 0;
+        padding: 14px;
+        height: 60px;
+        color: white;
+        font-size: 24px;
+        font-weight: 500;
+        border-radius: 5px;
+        background: $color-primary;
+        transition: .2s;
+    }
+
+    p {
+        position: relative;
+        margin-top: -30px;
+        margin-bottom: 0;
+        padding: 25px;
+        color: $color-primary;
+        background: $color-bg-grey;
+        border-radius: 0 0 5px 5px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 34px;
+        max-height: 0;
+        z-index: -1;
+        opacity: 0;
+        transition: .3s;
+    }
+}
+
+.about ul li i:before,
+ul li i:after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 3px;
+    height: 19px;
+    border-radius: 2px;
+    transition: 0.3s;
+    margin-top: 20px;
+    right: 50px;
+}
+
+.about ul li i:before {
+    transform: translate(-6px, 0) rotate(45deg);
+}
+
+.about ul li i:after {
+    transform: translate(6px, 0) rotate(-45deg);
+}

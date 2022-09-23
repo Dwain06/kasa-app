@@ -1,0 +1,23 @@
+.error-container{
+    max-width: $max-width;
+    margin: auto;
+
+    h1{
+        font-weight: 700;
+        font-size: 288px;
+        color: $color-primary;
+        margin-bottom: 10px;
+    }
+    p{
+        color: $color-primary;
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 200px;
+    }
+    a{
+        display: block;
+        text-decoration: underline;
+        text-align: center;
+        font-size: 18px;
+    }
+}
