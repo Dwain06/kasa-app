@@ -1,13 +1,13 @@
 import React from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
-import Hero from '../../components/Hero';
+import HeroAbout from '../../components/HeroAbout';
 
 const About = () => {
     return (
         <>
             <Header />
-            <Hero />
+            <HeroAbout />
             <div className="about">
                 <ul>
                     <li>

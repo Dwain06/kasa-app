@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div className="header">
-            <div className="header-container">
+        <div className="header-container">
+            <div className="header">
                 <div className="logo">
                     <img src="./logo.png" alt="logo kasa" />
                 </div>

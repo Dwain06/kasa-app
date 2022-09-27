@@ -20,7 +20,7 @@
 }
 
 .rentings{
-    @include flex-cc;
+    display: flex;
     margin: auto;
     max-width: $max-width;
     flex-wrap: wrap;
@@ -30,29 +30,23 @@
 
 }
 
-figure{
-    margin: 0;
-}
-
 .card{
+    margin: 15px 0px;
     position: relative;
-    flex: 0 2 33%;
+    flex: 0 2 33.3%;
+    display: flex;
+    justify-content: center;
 
     img{
         width: 340px;
         height: 340px;
-        // position: absolute;
-        // top: 0;
-        // left: 50%;
-        // transform: translateX(-50%);
+        text-align: center;
         object-fit: cover;
         border-radius: 15px;
     }
     figcaption{
         position: absolute;
         top: 0;
-        // left: 50%;
-        // transform: translateX(-50%);
         width: 340px;
         height: 340px;
         border-radius: 15px;
@@ -61,6 +55,7 @@ figure{
     h3{
         position: absolute;
         bottom: 0px;
+        width: 340px;
         margin: 10px;
         color: white;
     }

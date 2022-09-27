@@ -1,3 +1,21 @@
+.heroAbout{
+    @include flex-cc;
+    position: relative;
+    max-width: $max-width;
+    height: 223px;
+    margin: 40px auto;
+
+    &::before{
+        content: "";
+        position: absolute;
+        filter: brightness(75%);
+        height: 223px;
+        width: 100%;
+        border-radius: 25px;
+        background: url(../../assets/img/background_about.jpg) center/cover;
+    }
+}
+
 .about {
     max-width: 1023px;
     margin: auto;
@@ -22,11 +40,11 @@
                 max-height: 250px;
                 opacity: 1;
             }
-            &:checked~i:before {
-                transform: translate(6px, 0) rotate(45deg);
-            }
             &:checked~i:after {
-                transform: translate(-6px, 0) rotate(-45deg);
+                transform: translate(-6px, 0) rotate(45deg);
+            }
+            &:checked~i:before {
+                transform: translate(6px, 0) rotate(-45deg);
             }
         }
     }
@@ -75,9 +93,9 @@ ul li i:after {
 }
 
 .about ul li i:before {
-    transform: translate(-6px, 0) rotate(45deg);
+    transform: translate(6px, 0) rotate(45deg);
 }
 
 .about ul li i:after {
-    transform: translate(6px, 0) rotate(-45deg);
+    transform: translate(-6px, 0) rotate(-45deg);
 }

@@ -13,7 +13,7 @@ const Rentings = () => {
     return (
             <div className='rentings'>
                 {data.map((renting) => (
-                    <Card renting={renting}/>
+                    <Card key={renting.id} renting={renting}/>
                 ))}
             </div>
     );
