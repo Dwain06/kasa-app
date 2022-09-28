@@ -9,13 +9,14 @@ const Rentings = () => {
         .get("./data/rentingsData.json")
         .then((res) => setData(res.data));
     }, [])
+    console.log(data);
 
     return (
-            <div className='rentings'>
-                {data.map((renting) => (
-                    <Card key={renting.id} renting={renting}/>
-                ))}
-            </div>
+        <div className='rentings'>
+            {data.map((renting) => (
+                <Card key={renting.id} renting={renting}/>
+            ))}
+        </div>
     );
 };
 

@@ -25,6 +25,24 @@
         margin-top: 25px;
         position: relative;
 
+        i:before, i:after {
+            content: "";
+            position: absolute;
+            background-color: white;
+            width: 3px;
+            height: 19px;
+            border-radius: 2px;
+            transition: 0.3s;
+            margin-top: 20px;
+            right: 50px;
+        }
+        i:before {
+            transform: translate(6px, 0) rotate(45deg);
+        }
+        i:after {
+            transform: translate(-6px, 0) rotate(-45deg);
+        }
+
         input {
             position: absolute;
             top: 0;
@@ -77,25 +95,4 @@
         opacity: 0;
         transition: .3s;
     }
-}
-
-.about ul li i:before,
-ul li i:after {
-    content: "";
-    position: absolute;
-    background-color: white;
-    width: 3px;
-    height: 19px;
-    border-radius: 2px;
-    transition: 0.3s;
-    margin-top: 20px;
-    right: 50px;
-}
-
-.about ul li i:before {
-    transform: translate(6px, 0) rotate(45deg);
-}
-
-.about ul li i:after {
-    transform: translate(-6px, 0) rotate(-45deg);
 }
