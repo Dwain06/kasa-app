@@ -35,7 +35,7 @@ const Renting = () => {
             <>
                 <Header />
                 {isLoaded ?
-                    <div className='renting-details'>
+                    <div className='renting-details-container'>
                         <RentingDetails dataFiltred={dataFiltred} />
                     </div>
                     :

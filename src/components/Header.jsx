@@ -1,12 +1,14 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
         <div className="header-container">
             <div className="header">
                 <div className="logo">
-                    <img src="./logo.png" alt="logo kasa" />
+                    <Link to="/">
+                        <img src="./logo.png" alt="logo kasa" />
+                    </Link>
                 </div>
                 <div className="navigation">
                     <ul>

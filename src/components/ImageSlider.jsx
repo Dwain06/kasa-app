@@ -19,10 +19,8 @@ const ImageSlider = ({ pictures }) => {
 
     return (
         <div className='slider'>
-            <div>
-                <div onClick={goToPrevious} className="arrow left"></div>
-                <div onClick={goToNext} className="arrow right"></div>
-            </div>
+            <div onClick={goToPrevious} className="arrow left"></div>
+            <div onClick={goToNext} className="arrow right"></div>
             <div className="pictures" style={backgroundImage}></div>
             <div className="slideCount">
                 {currentIndex + 1}/{pictures.length}

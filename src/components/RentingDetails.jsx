@@ -7,18 +7,15 @@ const RentingDetails = ({ dataFiltred }) => {
     const { title, pictures, description, host, rating, location, equipments, tags } = dataFiltred;
 
     return (
-        <div className='rentingDetails'>
+        <div className='renting-details'>
             <ImageSlider pictures={pictures}/>
-            {/* {pictures.map((picture, index) => (
-                <img src={picture} key={index} alt={`${title}, vue numéro ${index + 1}`} />
-            ))} */}
             <div className="renting__title">
                 <div className="renting__title--location">
                     <h2>{title}</h2>
-                    <h4>{location}</h4>
+                    <h3>{location}</h3>
                 </div>
                 <div className="renting__title--host">
-                    <h5>{host.name}</h5>
+                    <h3>{host.name.split(" ")[0]}<br/>{host.name.split(" ")[1]}</h3>
                     <img src={host.picture} alt={host.name} className="host" />
                 </div>
             </div>
