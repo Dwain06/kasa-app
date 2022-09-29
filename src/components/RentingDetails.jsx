@@ -1,5 +1,6 @@
 import React from 'react';
 import Rating from '../components/Rating';
+import ImageSlider from '../components/ImageSlider'
 
 
 const RentingDetails = ({ dataFiltred }) => {
@@ -7,6 +8,7 @@ const RentingDetails = ({ dataFiltred }) => {
 
     return (
         <div className='rentingDetails'>
+            <ImageSlider pictures={pictures}/>
             {/* {pictures.map((picture, index) => (
                 <img src={picture} key={index} alt={`${title}, vue numéro ${index + 1}`} />
             ))} */}
