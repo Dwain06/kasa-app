@@ -1,19 +1,15 @@
 // ---------- VARIABLES ----------
 
-// $break-point-mobile: 768px;
-// $break-point-tablet: 992px;
-
-$color-text-bk: #222222;
+$break-point-mobile: 800px;
+$break-point-tablet: 1140px;
 
 $color-bg-grey: #F6F6F6;
-
 $color-primary: #FF6060;
 
 $font-primary: 'Montserrat', sans-serif;
 
 $padding-page: 20px;
-// $padding-page-responsive: 3rem;
-
+$margin-container: 20px;
 $max-width: 1240px;
 
 // ---------- MIXINS ----------
@@ -35,15 +31,3 @@ $max-width: 1240px;
     justify-content: space-between;
     align-items: center;
 }
-
-// @mixin pastille-nouveau{
-//     content: "Nouveau";
-//     padding: 5px 10px;
-//     border-radius: 3px;
-//     background-color: rgb(121, 223, 167);
-//     color: rgb(31, 128, 79);
-//     font-weight: 700;
-//     position: absolute;
-//     top: 15px;
-//     right: 15px;
-// }

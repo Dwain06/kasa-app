@@ -1,11 +1,16 @@
-.hero{
+.hero-container {
+    margin-right: $margin-container;
+    margin-left: $margin-container;
+}
+
+.hero {
     @include flex-cc;
     position: relative;
     max-width: $max-width;
     height: 223px;
     margin: 40px auto;
 
-    &::before{
+    &::before {
         content: "";
         position: absolute;
         filter: brightness(75%);
@@ -14,12 +19,18 @@
         border-radius: 25px;
         background: url(../../assets/img/background_home.jpg) center/cover;
     }
-    h1{
+
+    h1 {
         position: relative;
     }
 }
 
-.rentings{
+.rentings-container {
+    margin-right: $margin-container;
+    margin-left: $margin-container;
+}
+
+.rentings {
     display: flex;
     margin: auto;
     max-width: $max-width;
@@ -27,24 +38,24 @@
     padding: 20px;
     background: #F7F7F7;
     border-radius: 25px;
-
 }
 
-.card{
+.card {
     margin: 15px 0px;
     position: relative;
     flex: 0 2 33.3%;
     display: flex;
     justify-content: center;
 
-    img{
+    img {
         width: 340px;
         height: 340px;
         text-align: center;
         object-fit: cover;
         border-radius: 15px;
     }
-    figcaption{
+
+    figcaption {
         position: absolute;
         top: 0;
         width: 340px;
@@ -52,7 +63,8 @@
         border-radius: 15px;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     }
-    h3{
+
+    h3 {
         position: absolute;
         bottom: 0px;
         width: 340px;
@@ -61,3 +73,39 @@
     }
 }
 
+@media screen and (max-width: $break-point-tablet) {
+    .card {
+        flex: 0 2 50%;
+    }
+}
+
+@media screen and (max-width: $break-point-mobile) {
+    .hero {
+        height: 110px;
+
+        &::before {
+            height: 110px;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: left;
+            padding-left: 15px;
+        }
+    }
+
+    .rentings {
+        padding: 0px;
+        background: none;
+    }
+
+    .card {
+        margin: 15px auto;
+
+        img,
+        figcaption {
+            width: 335px;
+            height: 245px;
+        }
+    }
+}

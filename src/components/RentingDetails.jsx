@@ -8,29 +8,34 @@ const RentingDetails = ({ dataFiltred }) => {
 
     return (
         <div className='renting-details'>
-            <ImageSlider pictures={pictures}/>
-            <div className="renting__title">
-                <div className="renting__title--location">
-                    <h2>{title}</h2>
-                    <h3>{location}</h3>
+            <ImageSlider pictures={pictures} />
+
+            <div className="renting__title--container">
+                <div className="renting__title">
+                    <div className="renting__title--location">
+                        <h2>{title}</h2>
+                        <h3>{location}</h3>
+                    </div>
+                    <ul className="renting__title--tags">
+                        {tags.map((tag, index) => (
+                            <li key={index}>
+                                {tag}
+                            </li>
+                        ))}
+                    </ul>
                 </div>
-                <div className="renting__title--host">
-                    <h3>{host.name.split(" ")[0]}<br/>{host.name.split(" ")[1]}</h3>
-                    <img src={host.picture} alt={host.name} className="host" />
+
+                <div className="renting__host">
+                    <div className="renting__host--profile">
+                        <h3>{host.name.split(" ")[0]}<br />{host.name.split(" ")[1]}</h3>
+                        <img src={host.picture} alt={host.name} className="host" />
+                    </div>
+                    <div className="renting__host--stars">
+                        <Rating rating={rating} />
+                    </div>
                 </div>
             </div>
-            <div className="renting__attributes">
-                <ul className="renting__attributes--tags">
-                    {tags.map((tag, index) => (
-                        <li key={index}>
-                            {tag}
-                        </li>
-                    ))}
-                </ul>
-                <div className="renting__attributes--stars">
-                    <Rating rating={rating} />
-                </div>
-            </div>
+
             <div className="renting__description">
                 <ul className="renting__description--description">
                     <li>
@@ -55,7 +60,7 @@ const RentingDetails = ({ dataFiltred }) => {
                     </li>
                 </ul>
             </div>
-        </div>
+        </div >
     );
 };
 

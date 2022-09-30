@@ -1,3 +1,9 @@
+.renting-details-container{
+    flex-grow: 1;
+    margin-right: $margin-container;
+    margin-left: $margin-container;
+}
+
 .renting-details {
     max-width: $max-width;
     margin: auto;
@@ -45,8 +51,13 @@
     }
 }
 
-.renting__title {
+.renting__title--container{
     @include flex-sb;
+}
+
+.renting__title {
+    display: flex;
+    flex-direction: column;
     color: $color-primary;
 
     &--location {
@@ -58,23 +69,6 @@
             margin-top: 5px;
         }
     }
-
-    &--host {
-        display: flex;
-        align-items: center;
-        text-align: right;
-
-        img {
-            border-radius: 50%;
-            width: 64px;
-            margin-left: 10px
-        }
-    }
-}
-
-.renting__attributes {
-    @include flex-sb;
-
     &--tags {
         display: flex;
 
@@ -86,6 +80,27 @@
             margin-right: 10px;
             font-size: 14px;
         }
+    }
+}
+
+.renting__host {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+     
+    &--profile {
+        display: flex;
+        align-items: center;
+        text-align: right;
+
+        img {
+            border-radius: 50%;
+            width: 64px;
+            margin-left: 10px
+        }
+    }
+    &--stars{
+        margin-top: 30px;
     }
 }
 
@@ -178,5 +193,92 @@
             opacity: 0;
             transition: .3s;
         }
+    }
+}
+
+@media screen and (max-width: $break-point-mobile) {
+    .renting__title--container{
+        display: block;
+    }
+    .renting__title {
+  
+            h2 {
+                font-size: 18px;
+            }
+            h3 {
+                font-size: 14px;
+            }
+            li {
+                font-size: 10px;
+            }
+    }
+    
+    .renting__host {
+        flex-direction: row-reverse;
+        align-items: center;
+         
+        &--profile {
+            h3{
+                font-size: 10px;
+            }
+            img {
+                width: 32px;
+            }
+        }
+        &--stars{
+            margin-top: 10px;
+            img{
+                width: 15px;
+                margin-right: 4px;
+            }
+        }
+    }
+    .slider {
+        height: 255px;
+
+    
+        .arrow {
+            background-size: 15px 30px;
+    
+            &.right {
+                right: 0px;
+            }
+    
+            &.left {
+                left: 0px;
+            }
+        }
+    }
+    .renting__description {
+        display: block;
+
+    
+        &--description{
+            width: 100%;
+            margin-top: 35px;
+        }
+        &--equipments{
+            width: 100%;
+            margin-top: 0px;
+        }
+    
+        ul li {    
+            i:before, i:after {
+                margin-top: 12px;
+                right: 30px;
+            }    
+            input {
+                height: 45px;
+            }
+            h2 {
+                height: 45px;
+                font-size: 13px;
+            }
+        
+            p, ul li {
+                font-size: 12px;
+                line-height: 17px;
+            }
+        }        
     }
 }

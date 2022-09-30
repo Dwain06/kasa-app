@@ -47,6 +47,11 @@ ul{
     padding-left: 0;
 }
 
+.header-container{
+    margin-right: $margin-container;
+    margin-left: $margin-container;
+}
+
 .header{
     @include flex-sb;
     max-width: $max-width;
@@ -77,4 +82,24 @@ ul{
     color: white;
     padding: 50px;
     margin: 40px 0 0 0;
+}
+
+
+@media screen and (max-width: $break-point-mobile){
+    .header {
+        margin-bottom: 10px;
+
+        .logo img{
+            width: 145px;
+        }
+        .navigation{
+        
+            ul{
+                font-size: 12px;
+                width: 150px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    
 }
