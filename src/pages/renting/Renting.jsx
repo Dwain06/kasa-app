@@ -33,15 +33,17 @@ const Renting = () => {
         const dataFiltred = data.filter(renting => renting.id === rentingId)[0];
         return (
             <>
-                <Header />
                 {isLoaded ?
-                    <div className='renting-details-container'>
-                        <RentingDetails dataFiltred={dataFiltred} />
-                    </div>
+                    <>
+                        <Header />
+                            <div className='renting-details-container'>
+                                <RentingDetails dataFiltred={dataFiltred} />
+                            </div>
+                        <Footer />
+                    </>
                     :
-                    <div className="loding">Loading...</div>
+                    <div className="loading">Loading...</div>
                 }
-                <Footer />
             </>
         );
     }

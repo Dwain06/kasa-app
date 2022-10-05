@@ -4,21 +4,30 @@ import Card from './Card';
 
 const Rentings = () => {
     const [data, setData] = useState([]);
+    const [isLoaded, setIsLoaded] = useState(false);
     useEffect(() => {
         axios
             .get("./data/rentingsData.json")
-            .then((res) => setData(res.data));
+            .then((res) => {
+                setData(res.data);
+                setIsLoaded(true);
+            });
     }, [])
-    console.log(data);
 
     return (
-        <div className='rentings-container'>
-            <div className='rentings'>
-                {data.map((renting) => (
-                    <Card key={renting.id} renting={renting} />
-                ))}
+        <>
+        {isLoaded ?
+            <div className='rentings-container'>
+                <div className='rentings'>
+                    {data.map((renting) => (
+                        <Card key={renting.id} renting={renting} />
+                    ))}
+                </div>
             </div>
-        </div>
+        :
+            <div className="loading">Loading...</div>
+        }
+        </>
     );
 };
 
