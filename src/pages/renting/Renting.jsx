@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import RentingDetails from '../../components/RentingDetails';
+import E404 from '../e404/E404';
 
 const Renting = () => {
 
@@ -30,14 +31,23 @@ const Renting = () => {
         return <div>Error: {error.message}</div>;
     } else {
 
-        const dataFiltred = data.filter(renting => renting.id === rentingId)[0];
+        const dataFiltred = data.filter(renting => renting.id === rentingId);
+
+        if (dataFiltred.length === 0) {
+            return (
+                <>
+                    <E404 />
+                </>
+            )
+        }
+
         return (
             <>
                 {isLoaded ?
                     <>
                         <Header />
                             <div className='renting-details-container'>
-                                <RentingDetails dataFiltred={dataFiltred} />
+                                <RentingDetails dataFiltred={dataFiltred[0]} />
                             </div>
                         <Footer />
                     </>
