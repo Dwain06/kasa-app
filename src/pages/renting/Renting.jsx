@@ -5,6 +5,8 @@ import Header from '../../components/Header';
 import RentingDetails from '../../components/RentingDetails';
 import E404 from '../e404/E404';
 
+import rentingsData from "../../assets/data/rentingsData.json"
+
 const Renting = () => {
 
     const rentingId = useParams().id;
@@ -13,7 +15,7 @@ const Renting = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch("rentingsData.json")
+        fetch(rentingsData)
             .then(res => res.json())
             .then(
                 (result) => {
