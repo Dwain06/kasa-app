@@ -13,7 +13,7 @@ const Renting = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch("./data/rentingsData.json")
+        fetch("rentingsData.json")
             .then(res => res.json())
             .then(
                 (result) => {
