@@ -42,5 +42,8 @@
       "last 1 safari version"
     ],
     "homepage": "."
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
